@@ -59,10 +59,10 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")    
     kk_img = pg.transform.rotozoom(pg.image.load("fig/3.png"), 0, 0.9)
 
-    kk_rct = kk_img.get_rect()
+    kk_rct = kk_img.get_rect() 
     kk_rct.center = 300, 200
-    bb_img = pg.Surface((20, 20)) #
-    bb_img.set_colorkey((0, 0, 0))
+    bb_img = pg.Surface((20, 20))  # 空のSurface
+    bb_img.set_colorkey((0, 0, 0))  # 爆弾の四隅を透過させる
     pg.draw.circle(bb_img, (255, 0, 0), (10, 10), 10)
     bb_rct = bb_img.get_rect()
     bb_rct.centerx = random.randint(0, WIDTH)
